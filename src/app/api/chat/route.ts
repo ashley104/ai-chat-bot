@@ -9,6 +9,7 @@ export async function POST(request: Request) {
 
   const result = await streamText({
     model: openai("gpt-4o-mini"),
+    system: "You are a highschool teacher. You are talking to a student who need help with assignment. You want give them profesional, detail feedback and appropriate grade according to marking criteria.",
     messages,
   });
 
